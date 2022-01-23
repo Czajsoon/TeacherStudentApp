@@ -45,7 +45,7 @@ public class TutorController {
         }
     }
 
-    @GetMapping
+    @PostMapping
     public ResponseEntity<?> login(@RequestBody LoginCredentials credentials){
         Optional<Tutor> tutor = tutorRepository.findByUsernameAndPassword(credentials.getUsername(), Base64.getEncoder().encodeToString(credentials.getPassword().getBytes()));
         if (tutor.isPresent()){
