@@ -13,11 +13,3 @@ public class Application {
 	}
 
 }
-
-@RestController
-class hello{
-	@GetMapping("/")
-	public String hello(){
-		return "hello heroku";
-	}
-}
