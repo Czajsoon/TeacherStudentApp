@@ -46,8 +46,9 @@ public class TutorController {
     }
 
     @GetMapping
-    public ResponseEntity<?> login(@RequestBody LoginCredentials credentials){
-        Optional<Tutor> tutor = tutorRepository.findByUsernameAndPassword(credentials.getUsername(), Base64.getEncoder().encodeToString(credentials.getPassword().getBytes()));
+    public ResponseEntity<?> login(@RequestParam(name = "username") String username,
+                                   @RequestParam(name = "password") String password){
+        Optional<Tutor> tutor = tutorRepository.findByUsernameAndPassword(username, Base64.getEncoder().encodeToString(password.getBytes()));
         if (tutor.isPresent()){
             return ResponseEntity.ok(tutor.get().login());
         }
