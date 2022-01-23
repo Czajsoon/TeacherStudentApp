@@ -6,6 +6,7 @@ import com.mobileteacherstudent.application.tutor.entity.Tutor;
 import com.mobileteacherstudent.application.tutor.models.LoginCredentials;
 import com.mobileteacherstudent.application.tutor.models.TutorModel;
 import com.mobileteacherstudent.application.tutor.repository.TutorRepository;
+import io.swagger.annotations.ApiParam;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
