@@ -68,13 +68,13 @@ public class FieldController {
         else return ResponseEntity.ok("Nie ma elementu o takim ID: " + id + "!");
     }
 
-    @PostConstruct
-    private void init(){
-        fieldLocal(FieldModelLocal.builder().name("C++").build());
-        fieldLocal(FieldModelLocal.builder().name("Java").build());
-        fieldLocal(FieldModelLocal.builder().name("C#").build());
-        fieldLocal(FieldModelLocal.builder().name("RUBY").build());
-        fieldLocal(FieldModelLocal.builder().name("PYTHON").build());
-    }
+//    @PostConstruct
+//    private void init(){
+//        fieldLocal(FieldModelLocal.builder().name("C++").build());
+//        fieldLocal(FieldModelLocal.builder().name("Java").build());
+//        fieldLocal(FieldModelLocal.builder().name("C#").build());
+//        fieldLocal(FieldModelLocal.builder().name("RUBY").build());
+//        fieldLocal(FieldModelLocal.builder().name("PYTHON").build());
+//    }
 
 }
